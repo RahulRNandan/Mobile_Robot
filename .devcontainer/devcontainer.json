@@ -1,0 +1,14 @@
+{
+  "name": "ROS 2 Development Environment",
+  "dockerFile": "Dockerfile",
+  "extensions": [
+    "ms-azuretools.vscode-docker",
+    "ms-python.python",
+    "rosbuild.ros",
+    "rosbuild.ros2"
+  ],
+  "postCreateCommand": "source /opt/ros/foxy/setup.bash && rosdep update && rosdep install --from-paths src --ignore-src -r -y",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  }
+}
